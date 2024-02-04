@@ -1,15 +1,19 @@
 import copy
 import numpy
+import matrices
 
 
 def initial_step():
-    matrix = numpy.array([[3, 5, 7],
-                          [6, 3, 8],
-                          [9, 5, 6]])
+    # matrix = numpy.array([[3, 5, 7],
+    #                       [6, 3, 8],
+    #                       [9, 5, 6]])
+    matrix = matrices.matrix_2x2_1
+
     matrix_inverted = numpy.linalg.inv(matrix)
-    x_vector_column = numpy.array([6, 7, 8])
+    # x_vector_column = numpy.array([6, 7, 8])
+    x_vector_column = matrices.x_vector_column_2x2_1
     index = 2
-    n_size = 3
+    n_size = 2
     matrix_with_overline = copy.deepcopy(matrix)
 
     for i in range(n_size):
@@ -102,6 +106,9 @@ def main():
     print('ANSWER = \n', final_matrix)
     print('****************FIFTH STEP****************\n')
 
+    print('\nTESTTESTTESTTESTTESTTESTTEST')
+    print(numpy.linalg.inv(matrix_with_overline))
+    print('TESTTESTTESTTESTTESTTESTTEST\n')
 
 
 if __name__ == '__main__':
